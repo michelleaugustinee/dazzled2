@@ -10,5 +10,5 @@ app.get("/", (request, response) => {
 //port
 app.listen("3000", () => {
   console.log("Server sudah berjalan di port 3000");
-  console.log(__dirname);
+  //console.log(__dirname);
 });
