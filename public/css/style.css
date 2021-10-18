@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap');
+body {
+    font-family: 'Urbanist';
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav a {
+    color: white;
+    text-decoration: none!important;
+    float: left;
+    padding: 14px 18px;
+}
+
+.new-arrivals {
+    display: flex;
+    margin: 5%;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.new-arrivals img {
+    width: 250px;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.perkenalan {
+    display: flex;
+    margin: 5%;
+    justify-content: center;
+    text-align: center;
+}
+
+.text-intro {
+    padding: 10% 5%;
+}
+
+.newsletter {
+    margin: 5%;
+    background-color: #333;
+    color: white;
+    padding : 25px 20px;
+}
