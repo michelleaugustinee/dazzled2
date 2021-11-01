@@ -1,21 +1,22 @@
-const express = require('express')
-
+const express = require("express");
+const Product = require("../models/product");
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    res.render('pages/index');
-})
+router.get("/", (req, res) => {
+  res.render("pages/index");
+});
 
-router.get('/faq', (req, res) => {
-    res.render('pages/faq');
-})
+router.get("/allproducts", async (req, res) => {
+  var data = await Product.find();
+  res.render("pages/allproducts", { products: data });
+});
 
-router.get('/allproducts', (req, res) => {
-    res.render('pages/allproducts')
-})
+router.get("/faq", (req, res) => {
+  res.render("pages/faq");
+});
 
-router.get('/hto', (req, res) => {
-    res.render('pages/hto');
-})
+router.get("/hto", (req, res) => {
+  res.render("pages/hto");
+});
 
 module.exports = router;

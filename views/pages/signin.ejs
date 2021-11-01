@@ -12,10 +12,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://unpkg.com/feather-icons"></script>
   <style>
-    .card-body {
-      color: black;
-    }
-
     a {
       text-decoration: none !important;
     }
@@ -113,10 +109,16 @@
           <div>
             <input type="submit" name="submit" id="submit" value="Login" />
           </div>
+          <% if(locals.error) { %>
+            <span class="text-danger pl-2" style="font-size: 2.2vh">
+              <%= error %>
+            </span>
+            <% } %>
         </fieldset>
       </form>
     </div>
     <%- include('../layouts/footer.ejs'); %>
+      <script src="/js/signin.js"></script>
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -129,7 +131,6 @@
       <script>
         feather.replace();
       </script>
-      <script src="/js/signin.js"></script>
 </body>
 
 </html>
